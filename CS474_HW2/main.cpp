@@ -286,7 +286,7 @@ int main()
 			cout << personVector.size() << endl;
 			sort(personVector.begin(), personVector.end());
 
-			for (auto &z : personVector)
+			for (auto &z : personVector) 
 			{
 				cout << z.getName() << endl;
 			}
