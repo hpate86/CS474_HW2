@@ -76,31 +76,36 @@ int main()
 	vector<Course> courseVector;
 	vector<Student> studentVector;
 
-	Person p1;
+	
 	//1
-	cout << p1.totalPopulation() << endl;
+	cout << Person::num << endl;
 
 	//2
 	Course c1("CS 100", 1);
+	courseVector.emplace_back(c1);
 
 	//3
 	Course c2("CS 474", 3);
+	courseVector.emplace_back(c2);
 
 	//4
 	Student s1("Allison", "Doe");
+	studentVector.emplace_back(s1);
+	personVector.emplace_back(s1);
 
 	//5
 	s1.addCourse(c1);
 
 	//6
 	Teacher t1("Jennifer", "Lawrence", 20000);
-	teacherVector.push_back(t1);
+	teacherVector.emplace_back(t1);
+	personVector.emplace_back(t1);
 
 	//7 
 	t1.addCourse(c2);
 
 	//8
-	cout << p1.totalPopulation() << endl;
+	cout << Person::num << endl;
 
 	//9
 	s1.payTuition(10000);
@@ -147,10 +152,10 @@ int main()
 			cout << "What is the student’s last name? ";
 			cin >> lastname;
 			Student newStudent(firstname, lastname);
-			studentVector.push_back(newStudent);
+			studentVector.emplace_back(newStudent);
 
-			Person p2 = Student(firstname, lastname);
-			personVector.push_back(p2);
+			Person p2 = newStudent; //--------------------
+			personVector.emplace_back(p2);
 		}
 		else if (userInput == 2)
 		{
@@ -164,10 +169,10 @@ int main()
 			cin >> salary;
 
 			Employee newEmployee(firstname, lastname, salary);
-			employeeVector.push_back(newEmployee);
+			employeeVector.emplace_back(newEmployee);
 
-			Person p3 = Employee(firstname, lastname, salary);
-			personVector.push_back(p3);
+			Person p3 = newEmployee;  //-----------------------------
+			personVector.emplace_back(p3);
 		}
 		else if (userInput == 3)
 		{
@@ -183,7 +188,8 @@ int main()
 			Teacher newTeacher(firstname, lastname, salary);
 			teacherVector.push_back(newTeacher);
 
-			Person p4 = Teacher(firstname, lastname, salary);
+			//Person p4 = Teacher(firstname, lastname, salary);
+			Person p4 = newTeacher;  //--------------------------------
 			personVector.push_back(p4);
 		}
 		else if (userInput == 4)
@@ -287,7 +293,7 @@ int main()
 			{
 				cout << z.getName() << endl;
 			}
-			cout << endl;
+			//cout << endl;
 		}
 		else if (userInput == 8)
 		{
@@ -310,10 +316,10 @@ int main()
 				y.payTuition(costTuition);
 			}
 
-			for (auto &j : studentVector)
+			/*for (auto &j : studentVector)
 			{
 				cout << j.getBalance() << endl;
-			}
+			}*/
 		}
 		else if (userInput == 10)
 		{
@@ -351,7 +357,7 @@ int main()
 		}
 		else if (userInput == 12)
 		{
-			cout << "Enter first and last name of the person to check their balance: ";
+			cout << "Whose balance would you like to check? ";
 			cin >> studentName;
 			cin >> studentName1;
 			studentName = studentName + " " + studentName1;
@@ -360,28 +366,28 @@ int main()
 			{
 				if (studentName == x.getTeachersName())
 				{
-					cout << x.getBalance() << endl;
+					cout << x.getTeachersName() << " balance is " << x.getBalance() << endl;
 				}
 			}
 			for (auto &y : studentVector)
 			{
 				if (studentName == y.getStudentName())
 				{
-					cout << y.getBalance() << endl;
+					cout << y.getStudentName() << " balance is " << y.getBalance() << endl;
 				}
 			}
 			for (auto &z : employeeVector)
 			{
 				if (studentName == z.getEmployeeName())
 				{
-					cout << z.getBalance() << endl;
+					cout << z.getEmployeeName() << " balance is "<< z.getBalance() << endl;
 				}
 			}
 		}
 	}
 
 	//Dbug
-	cout << p1.totalPopulation() << endl;
+	//cout << p1.totalPopulation() << endl;
 
 	cout << "Goodbye" << endl;
 

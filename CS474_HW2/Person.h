@@ -25,7 +25,7 @@ protected:
 	double balance;
 
 public:
-	string className = "Person";
+	static string className;
 	static int num;
 
 	//Default constructor

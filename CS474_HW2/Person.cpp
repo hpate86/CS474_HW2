@@ -15,7 +15,7 @@ Person::Person()
 	firstName = "";
 	lastName = "";
 	balance = 0;
-
+	num++;
 }
 
 // fully qualified constructor
@@ -35,9 +35,9 @@ Person::Person(const Person& other)
 	balance = 0;
 	num++;
 }
-/*
+
 //Move Constructor
-Person::Person(Person &&p)
+/*Person::Person(Person &&p)
 {
 	firstName = p.firstName;
 	lastName = p.lastName;
