@@ -1,28 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Course" Collapsed="true">
-    <Position X="15" Y="0.75" Width="1.5" />
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Course">
+    <Position X="12.5" Y="0.75" Width="2" />
     <TypeIdentifier>
       <HashCode>AIAAAAICAAAAgAAAAIAAAAAAAAAAAAAAAAAgAAAAgAA=</HashCode>
       <FileName>Course.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Employee" Collapsed="true">
-    <Position X="11" Y="1.75" Width="1.5" />
+  <Class Name="Employee">
+    <Position X="9.5" Y="2.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAABgAAAAAgAAAAAACAAAAAAAAgAAAAAAAAA=</HashCode>
       <FileName>Employee.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Person" Collapsed="true">
-    <Position X="8.5" Y="0.75" Width="1.5" />
+  <Class Name="Person">
+    <Position X="6.75" Y="0.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AIAAAKAAAABAAEAAEAAAAAAIBAAAAAAAIAAmCAAAEAA=</HashCode>
       <FileName>Person.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Student" Collapsed="true">
-    <Position X="5.5" Y="1.75" Width="1.5" />
+  <Class Name="Student">
+    <Position X="3.75" Y="2.5" Width="2" />
     <NestedTypes>
       <Enum Name="Student::Status" Collapsed="true">
         <TypeIdentifier>
@@ -35,8 +35,8 @@
       <FileName>Student.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Teacher" Collapsed="true">
-    <Position X="10" Y="4" Width="1.5" />
+  <Class Name="Teacher">
+    <Position X="9.5" Y="5.75" Width="2" />
     <TypeIdentifier>
       <HashCode>AAEAAAAAABBgAAAMAAAAAAAAAACAAACAAAAAAAAAAEA=</HashCode>
       <FileName>Teacher.h</FileName>
