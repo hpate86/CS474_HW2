@@ -10,11 +10,8 @@
 #include"Employee.h"
 #include"Teacher.h"
 
-
-
 int main()
 {
-
 	//------------------------------------------------------------------
 	//Homework 1
 	/*
@@ -381,6 +378,9 @@ int main()
 			}
 		}
 	}
+
+	//Dbug
+	cout << p1.totalPopulation() << endl;
 
 	cout << "Goodbye" << endl;
 
