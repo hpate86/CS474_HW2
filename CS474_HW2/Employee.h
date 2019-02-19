@@ -16,6 +16,7 @@ public:
 	//Employee(Employee &&other);
 
 	virtual void paySalary();
+	string getEmployeeName();
 	~Employee();
 
 };

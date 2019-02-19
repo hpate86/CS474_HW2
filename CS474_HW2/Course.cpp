@@ -41,6 +41,12 @@ int Course::getnumCreditHr()
 	return numCreditHr;
 }
 
+bool Course::operator<(const Course &rhs) const
+{
+	return courseName < rhs.courseName;
+}
+
+
 
 
 Course::~Course()

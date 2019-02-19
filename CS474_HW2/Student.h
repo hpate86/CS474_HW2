@@ -31,6 +31,7 @@ public:
 	string currentStatus();
 	string getStudentName();
 	void payTuition(double);
+	double getBalance();
 
 	void Debug();
 	~Student();

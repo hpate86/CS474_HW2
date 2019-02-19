@@ -20,6 +20,7 @@ public:
 
 	string getCourseName();
 	int getnumCreditHr();
+	bool operator<(const Course &rhs) const;
 
 	~Course();
 };
