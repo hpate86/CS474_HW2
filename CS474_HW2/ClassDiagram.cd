@@ -22,7 +22,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Student">
-    <Position X="3.75" Y="2.5" Width="2" />
+    <Position X="3.5" Y="2.5" Width="2" />
     <NestedTypes>
       <Enum Name="Student::Status" Collapsed="true">
         <TypeIdentifier>

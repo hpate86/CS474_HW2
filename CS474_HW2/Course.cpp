@@ -1,3 +1,10 @@
+/* Course.cpp
+   Name: Harshil Patel
+   Date: 2/19/2019
+   CS 474
+   HW 2
+*/
+
 #include"Course.h"
 
 //Default constructor
@@ -15,6 +22,8 @@ Course::Course(string coursename, int credithr)
 }
 
 //Copy Constructor
+
+
 Course::Course(const Course& other)
 {
 	courseName = other.courseName;

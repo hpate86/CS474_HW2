@@ -1,3 +1,10 @@
+/* Student.h
+   Name: Harshil Patel
+   Date: 2/19/2019
+   CS 474
+   HW 2
+*/
+
 
 #include "Person.h"
 #include "Course.h"
