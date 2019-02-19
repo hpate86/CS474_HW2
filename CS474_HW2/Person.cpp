@@ -75,6 +75,12 @@ double Person::getBalance()
 	return balance;
 }
 
+//Operator overloading for sort function in main when user press 7
+bool Person::operator<(const Person &rhs) const
+{
+	return lastName < rhs.lastName;
+}
+
 //Destructor
 Person::~Person()
 {

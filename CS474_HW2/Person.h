@@ -7,6 +7,7 @@
 #include<iostream>
 #include<string>
 #include<vector>
+#include <algorithm> 
 using namespace std;
 
 #pragma once
@@ -44,6 +45,8 @@ public:
 	int getUIN();
 	double getBalance();
 	string getName();
+
+	bool operator<(const Person &rhs) const;
 
 	//destructor
 	~Person();

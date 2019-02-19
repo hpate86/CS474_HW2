@@ -11,6 +11,7 @@
 #include"Teacher.h"
 
 
+
 int main()
 {
 
@@ -73,7 +74,7 @@ int main()
 	int courseCredit;
 	vector<Person> personVector;
 	vector<Teacher> teacherVector;
-	vector<Employee*> employeeVector;
+	vector<Employee> employeeVector;
 	vector<Course> courseVector;
 	vector<Student> studentVector;
 
@@ -152,6 +153,7 @@ int main()
 			studentVector.push_back(newStudent);
 
 			Person p2 = Student(firstname, lastname);
+			personVector.push_back(p2);
 		}
 		else if (userInput == 2)
 		{
@@ -165,7 +167,10 @@ int main()
 			cin >> salary;
 
 			Employee newEmployee(firstname, lastname, salary);
-			employeeVector.push_back(&newEmployee);
+			employeeVector.push_back(newEmployee);
+
+			Person p3 = Employee(firstname, lastname, salary);
+			personVector.push_back(p3);
 		}
 		else if (userInput == 3)
 		{
@@ -180,6 +185,9 @@ int main()
 
 			Teacher newTeacher(firstname, lastname, salary);
 			teacherVector.push_back(newTeacher);
+
+			Person p4 = Teacher(firstname, lastname, salary);
+			personVector.push_back(p4);
 		}
 		else if (userInput == 4)
 		{
@@ -275,7 +283,14 @@ int main()
 		}
 		else if (userInput == 7)
 		{
-			
+			cout << personVector.size() << endl;
+			sort(personVector.begin(), personVector.end());
+
+			for (auto &z : personVector)
+			{
+				cout << z.getName() << endl;
+			}
+			cout << endl;
 		}
 	}
 
