@@ -111,6 +111,11 @@ string Student::getStudentName()
 	return Person::getName();
 }
 
+double Student::getBalance()
+{
+	return balance;
+}
+
 void Student::Debug()
 {
 	//print Currentcources

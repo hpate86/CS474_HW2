@@ -22,7 +22,10 @@ Employee::Employee(const Employee &other) : Person(other)
 }*/
 
 
-
+string Employee::getEmployeeName()
+{
+	return Person::getName();
+}
 
 
 void Employee::paySalary()

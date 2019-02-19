@@ -10,11 +10,8 @@
 #include"Employee.h"
 #include"Teacher.h"
 
-
-
 int main()
 {
-
 	//------------------------------------------------------------------
 	//Homework 1
 	/*
@@ -143,7 +140,6 @@ int main()
 		}
 		else if (userInput == 1)
 		{
-
 			cout << "What is the student’s first name? ";
 			cin >> firstname;
 
@@ -292,7 +288,99 @@ int main()
 			}
 			cout << endl;
 		}
+		else if (userInput == 8)
+		{
+			//sort function to sort course alphabeticaly
+			sort(courseVector.begin(), courseVector.end());
+			for (auto &y : courseVector)
+			{
+				cout << y.getCourseName() << endl;
+			}
+			cout << endl;
+		}
+		else if(userInput == 9)
+		{
+			double costTuition;
+			cout << "Enter cost of tuition: ";
+			cin >> costTuition;
+
+			for (auto &y : studentVector)
+			{
+				y.payTuition(costTuition);
+			}
+
+			for (auto &j : studentVector)
+			{
+				cout << j.getBalance() << endl;
+			}
+		}
+		else if (userInput == 10)
+		{
+			for (auto &i : employeeVector)
+			{
+				i.paySalary();
+			}
+
+			for (auto &j : teacherVector)
+			{
+				j.paySalary();
+			}
+
+			for (auto &k : employeeVector)
+			{
+				cout << k.getBalance() << endl;
+			}
+
+			for (auto &l : teacherVector)
+			{
+				cout << l.getBalance() << endl;
+			}
+		}
+		else if (userInput == 11)
+		{
+			for (auto &l : teacherVector)
+			{
+				l.endSemester();
+			}
+
+			for (auto &p : studentVector)
+			{
+				p.endSemester();
+			}
+		}
+		else if (userInput == 12)
+		{
+			cout << "Enter first and last name of the person to check their balance: ";
+			cin >> studentName;
+			cin >> studentName1;
+			studentName = studentName + " " + studentName1;
+
+			for (auto &x : teacherVector)
+			{
+				if (studentName == x.getTeachersName())
+				{
+					cout << x.getBalance() << endl;
+				}
+			}
+			for (auto &y : studentVector)
+			{
+				if (studentName == y.getStudentName())
+				{
+					cout << y.getBalance() << endl;
+				}
+			}
+			for (auto &z : employeeVector)
+			{
+				if (studentName == z.getEmployeeName())
+				{
+					cout << z.getBalance() << endl;
+				}
+			}
+		}
 	}
+
+	//Dbug
+	cout << p1.totalPopulation() << endl;
 
 	cout << "Goodbye" << endl;
 
